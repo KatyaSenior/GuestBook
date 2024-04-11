@@ -1,9 +1,7 @@
 const formWrapper = document.getElementById("formWrapper");
 
 async function getMessages() {
-  const response = await fetch(
-    "https://express-sql-games-demo.onrender.com/games"
-  );
+  const response = await fetch("http://localhost:8080/messages");
 
   const messages = await response.json();
   console.log(messages);
