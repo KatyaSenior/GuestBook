@@ -9,6 +9,51 @@
   </head>
   <body>
     <h1>Leave a Message</h1>
-    <div id="formWrapper"></div>
+    <div id="formWrapper">
+      <form id="guestBook">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          placeholder="Your Username"
+          required
+        />
+        <label for="content">Your Message</label>
+        <textarea
+          name="content"
+          id="content"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <fieldset ckass="reactions">
+          <input type="radio" id="smile" name="reaction" value="😀" checked />
+          <label for="smile">😀</label>
+          <input type="radio" id="sad" name="reaction" value="😢" />
+          <label for="sad">😢</label>
+          <input type="radio" id="angry" name="reaction" value="😡" />
+          <label for="angry">😡</label>
+          <input type="radio" id="love" name="reaction" value="😍" />
+          <label for="love">😍</label>
+          <input type="radio" id="eyes" name="reaction" value="👀" />
+          <label for="eyes">👀</label>
+        </fieldset>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <header>
+      <div id="messageShow"></div>
+      <form id="filterForm">
+        <select name="filter" id="filter">
+          <option value="all">All</option>
+          <option value="😀">😀</option>
+          <option value="😢">😢</option>
+          <option value="😡">😡</option>
+          <option value="😍">😍</option>
+        </select>
+        <button id="filterButton">Filter</button>
+      </form>
+    </header>
+    <ul id="messageList"></ul>
   </body>
 </html>
