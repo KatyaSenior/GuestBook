@@ -13,10 +13,10 @@ async function getMessages() {
     const p = document.createElement("p");
     const img = document.createElement("img");
 
-    h2.textContent = game.name;
-    p.textContent = `Came out in ${game.year}`;
-    img.src = game.imgURL;
-    img.alt = game.name;
+    h2.textContent = message.name;
+    p.textContent = `Came out in ${message.year}`;
+    img.src = message.imgURL;
+    img.alt = message.name;
 
     formWrapper.appendChild(h2);
     formWrapper.appendChild(p);
