@@ -24,6 +24,11 @@ app.post("/messages", function (request, response) {
   const newMessage = request.body;
   console.log(newMessage);
   response.json(newMessage);
+  const insertMessage = db.prepare(
+    `INSERT INTO messages (emoji, username, content) VALUES (?, ?, ?)`
+  );
+  insertMessage.run("?", "?", "?");
+  //send body to database. Look at line 19. That is grabbing the messages. Seed line 14. ? variable related to body.
 });
 
 app.listen(8080, function () {

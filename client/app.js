@@ -1,7 +1,7 @@
 const formWrapper = document.getElementById("formWrapper");
 const messageShowSpan = document.getElementById("messageShowSpan");
 
-let messageCount = 1;
+let messageCount = 3;
 
 async function getMessages() {
   const response = await fetch("http://localhost:8080/messages");
@@ -13,7 +13,6 @@ async function getMessages() {
     const li = document.createElement("li");
 
     li.textContent = `${message.emoji} ${message.username} said: ${message.content}`;
-
     messageList.appendChild(li);
   });
 }
@@ -37,6 +36,8 @@ async function handleSubmit(event) {
       "Content-Type": "application/json",
     },
   });
+  messageCount++;
+  getMessages();
 }
 
-addEventListener("submit", handleSubmit, getMessages);
+addEventListener("submit", handleSubmit);

@@ -11,7 +11,7 @@ db.exec(`
 `);
 
 const insertMessage = db.prepare(`
-INSERT INTO messages (emoji, username, content) VALUES (?, ?, ?)
+INSERT INTO messages (emoji, username, content) VALUES (emoji, username, content) 
 `);
 
 insertMessage.run("👀", "Katya", "Test");
