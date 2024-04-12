@@ -4,7 +4,7 @@ const messageShowSpan = document.getElementById("messageShowSpan");
 let messageCount = 3;
 
 async function getMessages() {
-  const response = await fetch("http://localhost:8080/messages");
+  const response = await fetch("https://guestbook-eb0h.onrender.com/messages");
   messageShowSpan.textContent = `${messageCount} messages`;
   const messages = await response.json();
   console.log(messages);
