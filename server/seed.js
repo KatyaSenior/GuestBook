@@ -15,3 +15,9 @@ INSERT INTO messages (emoji, username, content) VALUES (?, ?, ?)
 `);
 
 insertMessage.run("👀", "Katya", "Test");
+insertMessage.run("😡", "Ugh", "Broken code ):");
+insertMessage.run(
+  "😀",
+  "pls help",
+  "Tim, Manny, Cordelia, everyone.... Where are youuuuuuuuuu?"
+);

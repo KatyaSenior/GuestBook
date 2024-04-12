@@ -20,6 +20,12 @@ app.get("/messages", function (request, response) {
   response.json(messages);
 });
 
+app.post("/messages", function (request, response) {
+  const newMessage = request.body;
+  console.log(newMessage);
+  response.json(newMessage);
+});
+
 app.listen(8080, function () {
   console.log("AAAAAAAAAAAAAAH mood. 8080");
 });

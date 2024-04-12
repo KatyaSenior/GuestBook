@@ -20,4 +20,23 @@ async function getMessages() {
 
 getMessages();
 
-addEventListener("submit", getMessages);
+async function handleSubmit(event) {
+  event.preventDefault();
+  const username = event.target.username.value;
+  const content = event.target.content.value;
+  const emoji = event.target.reaction.value;
+
+  await fetch("http://localhost:8080/messages", {
+    method: "POST",
+    body: JSON.stringify({
+      username: username,
+      content: content,
+      emoji: emoji,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+}
+
+addEventListener("submit", handleSubmit, getMessages);

@@ -4,9 +4,9 @@ Main Goals Acheived:
 
 🎯 //Create a page containing a form to leave a message and a list of all the messages that have been left.
 
-🎯 //Style the form and the messages so they're easy to read on multiple kinds of device.
+🎯 Style the form and the messages so they're easy to read on multiple kinds of device.
 
-🎯 //Create an API POST route to accept the text from your message input form
+🎯 Create an API POST route to accept the text from your message input form
 
 🎯 Create a database to store the messages, and create a seed file to create the table
 
@@ -18,4 +18,12 @@ Major Bugs:
 
 1.  Problem: 404 error in client server
     Cause: Client & Server not connected. Local host not correctly linked in app.js
-    Status: Resolved. Assistance was required.
+    Status: Resolved. Assistance was required
+
+2.  Problem: emoji.value property cannot be read
+    Cause: Incorrect value attempted to be read
+    Status: Resolved. Changed emoji.value to reaction.value
+
+3.  Problem: 404 error when attempting to fetch data
+    Cause: Typo in server.js for app.post
+    Status: Resolved
